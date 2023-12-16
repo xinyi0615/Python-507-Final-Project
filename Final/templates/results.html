@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock and Wordcloud</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 45%;
+        }
+
+        .right {
+            width: 45%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Stock or Economic Data</h2>
+            <img src="{{ image }}" alt="Stock or Economic Data">
+        </div>
+        <div class="right">
+            <h2>Wordcloud</h2>
+            <img src="{{ wordcloud_image }}" alt="Wordcloud">
+            <br>
+            <button id="exitButton">Exit Program</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('exitButton').addEventListener('click', function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/exit-program', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+
+                    alert('Exiting Program');
+                    window.close(); // 关闭当前窗口
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
