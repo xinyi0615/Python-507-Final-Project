@@ -39,3 +39,7 @@ pip install Flask pandas matplotlib wordcloud yfinance praw nltk selenium
 4. Enter a search term, start date, and end date.
 5. Click the "Search" button to generate charts and word clouds.
 6. To exit the program, click the "Exit Program" button on the Wordcloud page.
+
+## Video Demo
+Link as below.
+https://youtu.be/7pfHqZRqI8c
