@@ -14,22 +14,29 @@ This is a Data Analysis Dashboard application that allows users to analyze stock
 
 ## Prerequisites
 Before running the application, make sure you have the following dependencies installed:
-- Python 3
-- Flask
+- os
 - pandas
-- matplotlib
+- matplotlib.pyplot
+- matplotlib.use('Agg')
 - wordcloud
+- Flask
+- fredapi
 - yfinance
 - praw
 - nltk
-- selenium (for automated web interaction)
+- Some package maybe needed
+- nltk.download('punkt')
+- nltk.download('stopwords')
+- collections
+- nltk.corpus
+- webbrowser
+- threading
 
 You also need to obtain API keys for Fred and Reddit, and update the `Keys.py` file accordingly.
 
 ## Installation
 1. Clone this repository to your local machine.
 2. Install the required dependencies using pip:
-pip install Flask pandas matplotlib wordcloud yfinance praw nltk selenium
 3. Update the `Keys.py` file with your API keys.
 
 ## Usage
@@ -41,5 +48,5 @@ pip install Flask pandas matplotlib wordcloud yfinance praw nltk selenium
 6. To exit the program, click the "Exit Program" button on the Wordcloud page.
 
 ## Video Demo
-Link as below.
+Video link as below.
 https://youtu.be/7pfHqZRqI8c
